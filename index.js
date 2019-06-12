@@ -39,7 +39,7 @@ async function takeScreenshot(page, offset = 0) {
       nextPage: offset + 1 < list.length ? offset + 1 : undefined
     };
   }
-  await page.screenshot({ path: `./new/idle2/${fileName}.png`, type: 'png' });
+  await page.screenshot({ path: `./images/idle2/${fileName}.png`, type: 'png' });
   return {
     data: fileName,
     nextPage: offset + 1 < list.length ? offset + 1 : undefined
@@ -67,5 +67,5 @@ async function singelShot(url) {
   await browser.close();
 }
 
-// run();
-singelShot('https://blotter.js.org');
+run();
+// singelShot('https://blotter.js.org');
